@@ -16,14 +16,15 @@
     <session id="801662858">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.35" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -38,14 +39,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4883" />
-          <entry key="txt" value="77" />
+          <entry key="py" value="5353" />
+          <entry key="txt" value="103" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="77" />
-          <entry key="Python" value="4883" />
+          <entry key="PLAIN_TEXT" value="103" />
+          <entry key="Python" value="5353" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -82,11 +83,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+            <state relative-caret-position="201">
+              <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1537974907226" expanded="true" signature="859:954" ph="..." />
+                <marker date="1538063370371" expanded="true" signature="859:954" ph="..." />
               </folding>
             </state>
           </provider>
@@ -95,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="48" column="82" selection-start-line="48" selection-start-column="82" selection-end-line="48" selection-end-column="82" />
+            <state relative-caret-position="-765">
+              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -233,11 +234,19 @@
       <option name="project" value="LOCAL" />
       <updated>1537801965780</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="after adding HP bars basic">
+      <created>1537975194802</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1537975194802</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24330357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -293,7 +302,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first video commit" />
     <MESSAGE value="before adding inventory" />
-    <option name="LAST_COMMIT_MESSAGE" value="before adding inventory" />
+    <MESSAGE value="after adding HP bars basic" />
+    <option name="LAST_COMMIT_MESSAGE" value="after adding HP bars basic" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/classes/inentory.py" />
@@ -319,8 +329,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="48" column="82" selection-start-line="48" selection-start-column="82" selection-end-line="48" selection-end-column="82" />
+        <state relative-caret-position="-765">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -329,11 +339,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+        <state relative-caret-position="201">
+          <caret line="101" lean-forward="true" selection-start-line="101" selection-end-line="101" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
-            <marker date="1537974907226" expanded="true" signature="859:954" ph="..." />
+            <marker date="1538063370371" expanded="true" signature="859:954" ph="..." />
           </folding>
         </state>
       </provider>
