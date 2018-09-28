@@ -83,7 +83,7 @@ class Person:
         bar_ticks = (self.hp / self.maxhp) * 25
 
         while bar_ticks > 0:
-            hp_bar += '█'
+            hp_bar += '|'
             bar_ticks -= 1
 
         while len(hp_bar) < 25:
@@ -94,11 +94,59 @@ class Person:
         mp_ticks = (self.mp / self.maxmp) * 10
 
         while mp_ticks > 0:
-            mp_bar += '█'
+            mp_bar += '|'
             mp_ticks -= 1
-
+# █
         while len(mp_bar) < 10:
             mp_bar += ' '
 
+        hp_string = str(self.hp) + "/" + str(self.maxhp)
+        current_hp =''
+
+        if len(hp_string) < 9:
+            decreased = 9 - len(hp_string)
+
+            while decreased > 0:
+                current_hp += " "
+                decreased -= 1
+
+            current_hp += hp_string
+        else:
+            current_hp = hp_string
+
+        mp_string = str(self.mp) + "/" + str(self.maxmp)
+        current_mp = ''
+
+        if len(mp_string) < 7:
+            decreased = 7 - len(mp_string)
+
+            while decreased > 0:
+                current_mp += " "
+                decreased -= 1
+
+            current_mp += mp_string
+        else:
+            current_mp = mp_string
+
         # print("\t\t\t\t\t\t\t_________________________                        __________")
-        print(bcolors.BOLD + self.name + "\t\t\t " + str(self.hp) + "/" + str(self.maxhp) + " |" + bcolors.OKGREEN + hp_bar + bcolors.ENDC + bcolors.BOLD + "|                " + str(self.mp) + "/" + str(self.maxmp) + " |" + bcolors.OKBLUE + mp_bar + bcolors.ENDC + "|")
+        print(bcolors.BOLD + self.name + "\t\t\t " + current_hp + " |" + bcolors.OKGREEN + hp_bar + bcolors.ENDC + bcolors.BOLD + "|                " + current_mp + " |" + bcolors.OKBLUE + mp_bar + bcolors.ENDC + "|")
+
+    def get_enemy_stats(self):
+        bar_ticks = (self.hp / self.maxhp) * 100 / 2
+
+        hp_string = str(self.hp) + "/" + str(self.maxhp)
+        current_hp = ''
+
+        if len(hp_string) < 9:
+            decreased = 9 - len(hp_string)
+
+            while decreased > 0:
+                current_hp += " "
+                decreased -= 1
+
+            current_hp += hp_string
+        else:
+            current_hp = hp_string
+
+        hp_bar = '|' * round(bar_ticks) + ' ' * (50 - round(bar_ticks))
+        print(bcolors.BOLD + self.name + "\t\t\t " + current_hp + " |" + bcolors.FAIL + hp_bar + bcolors.ENDC + bcolors.BOLD + "|")

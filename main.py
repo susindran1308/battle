@@ -1,6 +1,7 @@
 from classes.game import Person, bcolors
 from classes.magic import Spell
 from classes.inventory import Item
+import random
 
 # Create black magic
 fire = Spell("Fire", 25, 100, "black")
@@ -33,7 +34,7 @@ player_items = [{"item": potion, "quantity": 15},
 player1 = Person("Valos:", 3260, 132, 300, 34, player_spells, player_items)
 player2 = Person("Nick:", 4160, 188, 311, 34, player_spells, player_items)
 player3 = Person("Robot:", 3089, 174, 288, 34, player_spells, player_items)
-enemy = Person("Magus", 1200, 701, 525, 34, [], [])
+enemy = Person("Magus", 11500, 701, 1200, 34, [], [])
 
 players = [player1, player2, player3]
 running = True
@@ -46,11 +47,13 @@ while running:
 
     print("\n\n")
 
-    print("NAME                                     HP                                                MP")
+    print("NAME                                     HP                                        MP")
 
     for player in players:
         player.get_stats()
     print("\n")
+
+    enemy.get_enemy_stats()
 
     for player in players:
         player.choose_action()
@@ -109,6 +112,15 @@ while running:
                 print(bcolors.OKGREEN + "\n", item.name, "heals for", str(item.prop), "HP" + bcolors.ENDC)
 
             elif item.type == "elixr":
+
+                if item.name == "Mega-Elixr":
+                    for i in players:
+                        i.hp = i.maxhp
+                        i.mp = i.maxmp
+                else:
+                    player.hp = player.maxhp
+                    player.mp = player.maxmp
+
                 player.hp = player.maxhp
                 player.mp = player.maxmp
                 print(bcolors.OKGREEN + "\n", item.name, "fully restores HP/MP.", bcolors.ENDC)
@@ -118,9 +130,10 @@ while running:
                 print(bcolors.FAIL + "\n", item.name, "deals", item.prop, "points of damage", bcolors.ENDC)
 
     enemy_choice = 1
+    target = random.randrange(0, 2)
     enemy_dmg = enemy.generate_damage()
+    players[target].take_damage(enemy_dmg)
 
-    player1.take_damage(enemy_dmg)
     print("Enemy attacks for", enemy_dmg)
     print("____________________")
     print("Enemy HP:", bcolors.FAIL + str(enemy.get_hp()) + "/" + str(enemy.get_max_hp()) + bcolors.ENDC)
